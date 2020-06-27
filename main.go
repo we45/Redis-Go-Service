@@ -22,7 +22,9 @@ type CCN struct {
 }
 
 func main() {
-	redisAddr := fmt.Sprintf("%s:%s", os.Getenv("REDIS_HOST"), os.Getenv("REDIS_PORT"))
+	host := os.Args[1]
+	port := os.Args[2]
+	redisAddr := fmt.Sprintf("%s:%s", host, port)
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     redisAddr,
 		Password: "",

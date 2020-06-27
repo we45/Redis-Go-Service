@@ -1,0 +1,5 @@
+
+go.mod
+go.sum
+dist/card-gen
+dist/card-gen-mac
